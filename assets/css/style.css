@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --primary-color: #ff9307;
+    --secondary-color: #ffb612;
+    --bg-color: #f5c518;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    background: #111;
+    color: #fff;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #fff;
+    text-align: center;
+}
+
+hr {
+    display: inline-block;
+    width: 50vh;
+    margin: 2rem;
+}
+
+/* ================= SECTION ================= */
+.section {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.section h2 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: 3.2rem;
+}
+
+/* ================= HERO ================= */
+.hero {
+    background: url(/assets/img/h-bg.jpg) center/cover;
+    position: relative;
+    z-index: 1;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0) 100%);
+    z-index: -1;
+}
+
+.logo {
+    margin: 0 auto;
+    max-width: 25rem;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    max-width: 80rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    line-height: 5rem;
+}
+
+.hero-content h1 span {
+    color: #fff;
+}
+
+/* ================= PREMIUM ================= */
+.premium {
+    background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+    color: #fff;
+    padding: 8rem 2rem;
+    text-align: center;
+}
+
+.premium-container {
+    max-width: 110rem;
+    margin: 0 auto;
+}
+
+.premium h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    margin-bottom: 4rem;
+}
+
+.premium-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+}
+
+.premium-box {
+    flex: 1;
+    min-width: 20rem;
+    background: #222;
+    padding: 3rem;
+    border-radius: 1.2rem;
+    transition: 0.3s;
+}
+
+.premium-box:hover,
+.card:hover {
+    transform: translateY(-0.5rem);
+}
+
+.premium-box h3 {
+    font-size: 2rem;
+    color: var(--bg-color);
+}
+
+.depoimentos {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+.depoimento {
+    flex: 1;
+    min-width: 25rem;
+    background: #1c1c1c;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-style: italic;
+}
+
+.premium-cta h3 {
+    font-size: 1.8rem;
+}
+
+.btn-premium {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    background: var(--bg-color);
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-premium:hover, .btn:hover {
+    background: #ffd700;
+}
+
+/* ================= BUTTONS ================= */
+.buttons {
+    margin-top: 4rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin: 1rem;
+    padding: 1.2rem 2rem;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+}
+
+.primary {
+    background: var(--bg-color);
+    color: #000;
+    text-align: center;
+}
+
+.secondary {
+    border: 1px solid var(--bg-color);
+    color: var(--bg-color);
+    text-align: center;
+}
+
+/* ================= PLANOS ================= */
+.planos {
+    background-color: #141414;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.card {
+    background: var(--bg-color);
+    padding: 3rem 4rem;
+    width: 100%;
+    max-width: 30rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.card.destaque {
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+    background-color: var(--secondary-color);
+}
+
+.card.destaque h3+p {
+    text-transform: initial;
+    font-size: 1rem;
+    text-align: start;
+}
+
+.card.destaque .btn {
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
+}
+
+.card h3 {
+    font-weight: normal;
+    letter-spacing: .5rem;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.card .price {
+    font-size: 7rem;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.card .price span {
+    font-size: 1.8rem;
+    position: relative;
+    top: -1.5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.card .btn {
+    border: .1rem solid #fff;
+    color: #fff;
+    margin: 0 auto;
+    position: relative;
+    left: 2.5rem;
+}
+
+/* ================= AVALIAÇÃO ================= */
+.avaliacao {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.avaliacao .hero-av {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url(/assets/img/ilustrate-img) top/cover;
+    z-index: 1;
+}
+
+.avaliacao .hero-av h2 {
+    margin-bottom: 0;
+}
+
+.avaliacao .hero-av .cards {
+    justify-content: space-evenly;
+}
+
+.avaliacao .hero-av .cards .card {
+    width: 100%;
+    max-width: 40rem;
+    max-height: 25rem;
+}
+
+.avaliacao .hero-av .cards .card h3 {
+    font-size: 1.6rem;
+}
+
+/* ================= SOBRE ================= */
+.section.sobre {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sobre p {
+    text-align: center;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.sobre .video-container {
+    position: relative;
+    width: 100%;
+    height: 70rem;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.sobre .bg-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(10px);
+}
+
+.sobre .main-video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    display: block;
+}
+
+/* ================= HORÁRIOS ================= */
+.horarios h3 {
+    margin: 10px 0;
+    font-size: 1.6rem;
+}
+
+.horarios p {
+    text-transform: uppercase;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+.diferenciais .grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 60rem;
+}
+
+.diferenciais .grid div {
+    background-color: transparent;
+    border: .1rem solid #333;
+    border-radius: .4rem;
+    padding: .5rem 2rem;
+    font-size: 1.6rem;
+}
+
+/* ================= LOCALIZAÇÃO ================= */
+.localizacao {
+    background-color: #141414;
+}
+
+.localizacao p {
+    margin-bottom: .5rem;
+}
+
+.localizacao .map {
+    width: 100%;
+    height: 25rem;
+    margin-bottom: 2rem;
+}
+
+.localizacao .map iframe {
+    width: 100%;
+    max-width: 80rem;
+    height: 100%;
+    border-radius: .5rem;
+}
+
+.localizacao .contato h3 {
+    font-size: 2rem;
+}
+
+/* ================= FAQ ================= */
+.faq-question {
+    border: none;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: block;
+    width: 100%;
+    max-width: 60rem;
+    text-align: center;
+    margin: 0 auto 30px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem 1rem 9rem;
+}
+
+.footer h3 {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+
+.footer .logo {
+    width: 100px;
+}
+
+.footer .logo img {
+    width: 100%;
+    margin: 1rem;
+}
+
+.footer .icon-instagram {
+    filter: invert();
+    width: 2.5rem;
+    margin: 1rem;
+}
+
+.footer .icon-instagram img {
+    width: 100%;
+}
+
+.footer p:last-child {
+    margin: 3rem 0;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp-float {
+    position: fixed;
+    z-index: 1;
+    bottom: 2rem;
+    right: 2rem;
+    background: #25D366;
+    padding: 1.5rem;
+    border-radius: 50%;
+    color: #fff;
+    width: 6rem;
+    height: 6rem;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ================= ANIMAÇÃO ================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= RESPONSIVO ================= */
+@media (width <=480px) {
+    .sobre .video-container {
+        height: 40rem;
+    }
+
+    .avaliacao .hero-av .cards {
+        height: auto;
+    }
+
+    .card .price {
+        font-size: 5rem;
+    }
+
+    .card .btn {
+        font-size: 1.2rem;
+        padding: .7rem 1.5rem;
+    }
+}
+
+@media (width <=768px) {
+    .avaliacao .hero-av .cards .card {
+        max-width: 35rem;
+    }
+
+    .card h3 {
+        font-size: 1.4rem;
+    }
+
+    .avaliacao .hero-av .cards .card h3 {
+        font-size: 1.3rem;
+    }
+}
