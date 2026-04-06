@@ -330,20 +330,62 @@ p {
 }
 
 /* ================= SOBRE ================= */
-.section.sobre {
+.sobre > p {
+    text-align: center;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.sobre h3 {
+    font-size: 2rem;
+    margin-top: 5rem;
+}
+
+.sobre .itens {
+    width: 100%;
+    max-width: 70rem;
+    display: grid;
+    gap: 16px;
+    padding: 16px 0px;
+    margin: 1rem auto 0;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.sobre .itens .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 0.5rem;
+    min-width: 0px;
+    margin-bottom: 0px;
+}
+
+.sobre .itens .item svg {
+    width: 24px;
+    height: 24px;
+    fill: rgb(0, 0, 0);
+    filter: invert();
+}
+
+.sobre .itens .item p {
+    word-break: normal;
+    font-weight: 400;
+    text-align: left;
+    padding-left: .3rem;
+}
+
+/* ================= VIDEO ================= */
+.section.video {
     padding-left: 0;
     padding-right: 0;
 }
 
-.sobre p {
-    text-align: center;
-    width: 100%;
-    padding: 0 2rem;
-    max-width: 80rem;
-    margin: 0 auto;
-}
 
-.sobre .video-container {
+.video .video-container {
     position: relative;
     width: 100%;
     height: 70rem;
@@ -351,7 +393,7 @@ p {
     margin-top: 2rem;
 }
 
-.sobre .bg-video {
+.video .bg-video {
     position: relative;
     width: 100%;
     height: 100%;
@@ -359,7 +401,7 @@ p {
     filter: blur(8px);
 }
 
-.sobre .main-video {
+.video .main-video {
     position: absolute;
     top: 0;
     left: 50%;
@@ -575,6 +617,10 @@ p {
     .avaliacao .hero-av h2+p {
         margin-bottom: 4rem;
     }
+
+    .sobre .itens {
+    grid-template-columns: 1fr;
+}
 }
 
 @media (width <=840px) {
