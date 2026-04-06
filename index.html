@@ -12,11 +12,13 @@
     <meta name="author" content="Top Fitness Aracagy">
     <meta property="og:title" content="GYM Top Fitness Aracagy">
     <meta property="og:description" content="Treine na melhor academia do Aracagy">
-    <meta property="og:image" content="/assets/img/preview/preview-loc-TF.jpg">
+    <meta property="og:image" content="https://gymtopfitness.vercel.app/assets/img/preview/preview-loc-TF.jpg">
+    <meta property="og:url" content="https://gymtopfitness.vercel.app">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GYM Top Fitness Aracagy">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
     <title>GYM Top Fitness Aracagy</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
@@ -47,17 +49,17 @@
         </p>
 
         <div class="video-container">
-            <video autoplay muted loop class="bg-video">
-                <source src="/assets/img/preview/video-TF.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline preload="none" class="bg-video">
+                <source src="/assets/img/preview/bg-video.mp4" type="video/mp4">
             </video>
 
-            <video controls class="main-video">
-                <source src="/assets/img/preview/video-TF.mp4" type="video/mp4">
+            <video controls muted playsinline class="main-video">
+                <source src="/assets/img/preview/bg-video.mp4" type="video/mp4">
             </video>
         </div>
     </section>
 
-    <section class="premium">
+    <section class="premium reveal">
         <div class="premium-container">
 
             <h2>Treine com propósito e Evolua com resultado</h2>
@@ -111,7 +113,7 @@
 
     <section id="planos" class="section planos reveal">
         <h2>Escolha o plano ideal para você</h2>
-        
+
         <div class="cards">
             <div class="card destaque">
                 <h3>Semestral</h3>
@@ -258,9 +260,11 @@
         <p>© 2026 Top Fitness Aracagy - Todos os direitos reservados</p>
     </footer>
 
-    <a href="https://api.whatsapp.com/message/QI4JDFVFSOR3G1?autoload=1&app_absent=0&utm_source=ig" target="_blank"
-        rel="noopener noreferrer" class="whatsapp-float"><img src="/assets/img/icones/icons8-whatsapp-50.png"
-            alt="whatsapp"></a>
+    <div class="icon-float">
+        <a href="https://api.whatsapp.com/message/QI4JDFVFSOR3G1?autoload=1&app_absent=0&utm_source=ig" target="_blank"
+            rel="noopener noreferrer" class="whatsapp-float"><img src="/assets/img/icones/icons8-whatsapp-50.png"
+                alt="whatsapp"></a>
+    </div>
     <script src="/assets/js/script.js"></script>
 </body>
 
