@@ -30,18 +30,31 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-size: clamp(3.2rem, 4vw, 5rem);
 }
 
 h2 {
-    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    font-size: clamp(1.6rem, 8vw, 3.4rem);
+}
+
+h3 {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.cards h3 {
+    font-size: clamp(1rem, 3vw, 1.6rem);
 }
 
 p {
-    font-size: 1.6rem;
+    font-size: clamp(1.6rem, 3vw, 1.6rem);
     line-height: 1.6;
     color: #fff;
     text-align: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
 
 /* ================= SECTION ================= */
@@ -53,140 +66,16 @@ p {
 .section h2 {
     text-transform: uppercase;
     margin-bottom: 2rem;
-    font-size: 3.2rem;
-}
-
-/* ================= HERO ================= */
-.hero {
-    background: url(/assets/img/h-bg.webp) center/cover;
-    position: relative;
-    z-index: 1;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .overlay {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0) 100%);
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 1));
     z-index: -1;
-}
-
-.logo {
-    margin: 0 auto;
-    max-width: 25rem;
-}
-
-.logo img {
-    width: 100%;
-}
-
-.hero-content {
-    text-align: center;
-    padding: 2rem;
-    width: 100%;
-    max-width: 80rem;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    margin-bottom: .5rem;
-    line-height: 5rem;
-}
-
-.hero-content h1 span {
-    color: #fff;
-}
-
-/* ================= PREMIUM ================= */
-.premium {
-    background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
-    color: #fff;
-    padding: 8rem 2rem;
-    text-align: center;
-}
-
-.premium-container {
-    max-width: 110rem;
-    margin: 0 auto;
-}
-
-.premium h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.subtitle {
-    margin-bottom: 4rem;
-}
-
-.premium-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    margin-bottom: 5rem;
-    flex-wrap: wrap;
-}
-
-.premium-box {
-    flex: 1;
-    min-width: 20rem;
-    background: #222;
-    padding: 3rem;
-    border-radius: 1.2rem;
-    transition: 0.3s;
-}
-
-.premium-box:hover,
-.card:hover {
-    transform: translateY(-0.5rem);
-}
-
-.premium-box h3 {
-    font-size: 2rem;
-    color: var(--bg-color);
-}
-
-.depoimentos {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 5rem;
-}
-
-.depoimento {
-    flex: 1;
-    min-width: 25rem;
-    background: #1c1c1c;
-    padding: 2rem;
-    border-radius: 1rem;
-    font-style: italic;
-}
-
-.premium-cta h3 {
-    font-size: 1.8rem;
-}
-
-.btn-premium {
-    display: inline-block;
-    padding: 1.2rem 2.5rem;
-    background: var(--bg-color);
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-premium:hover, .btn:hover {
-    background: #ffd700;
 }
 
 /* ================= BUTTONS ================= */
@@ -219,9 +108,137 @@ p {
     text-align: center;
 }
 
+.btn-premium:hover, .btn:hover {
+    background: #ffd700;
+    font-weight: 500;
+}
+
+/* ================= HERO ================= */
+.hero {
+    background: url(/assets/img/bg-academia.webp) center/cover;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .logo {
+    margin: 0 auto;
+    max-width: 25rem;
+    position: absolute;
+    top: 1rem;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    max-width: 90rem;
+}
+
+.hero-content .btn.secondary:hover {
+    background-color: transparent;
+    color: #ffd700;
+    border-color: #ffd700;
+}
+
+.hero-content h1 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    line-height: 5rem;
+}
+
+.hero-content h1 span {
+    color: #fff;
+}
+
+/* ================= PREMIUM ================= */
+.premium {
+    background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+    color: #fff;
+    padding: 8rem 2rem;
+    text-align: center;
+}
+
+.premium-container {
+    max-width: 110rem;
+    margin: 0 auto;
+}
+
+.premium h2 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    margin-bottom: 4rem;
+}
+
+.premium-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+}
+
+.premium-box {
+    flex: 1;
+    min-width: 20rem;
+    background: #222;
+    padding: 3rem;
+    border-radius: 1.2rem;
+    transition: 0.3s;
+}
+
+.premium-box:hover,
+.card:hover {
+    transform: translateY(-0.5rem);
+}
+
+.premium-box h3 {
+    color: var(--bg-color);
+}
+
+.depoimentos {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+.depoimento {
+    flex: 1;
+    min-width: 25rem;
+    background: #1c1c1c;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-style: italic;
+}
+
+.premium-cta h3 {
+    margin-top: 3rem;
+}
+
+.btn-premium {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    background: var(--bg-color);
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
 /* ================= PLANOS ================= */
 .planos {
-    background-color: #141414;
+    /* background: url(/assets/img/bg-academia-precos.webp) center/cover; */
+    width: 100%;
+    height: auto;
 }
 
 .cards {
@@ -255,6 +272,7 @@ p {
     background-color: var(--secondary-color);
 }
 
+
 .card.destaque h3+p {
     text-transform: initial;
     font-size: 1rem;
@@ -269,8 +287,8 @@ p {
 .card h3 {
     font-weight: normal;
     letter-spacing: .5rem;
-    font-size: 2rem;
     text-align: left;
+    max-width: 95%;
 }
 
 .card .price {
@@ -293,44 +311,39 @@ p {
     left: 2.5rem;
 }
 
+.card.destaque .btn:hover {
+    background-color: #ffd700;
+}
+
 /* ================= AVALIAÇÃO ================= */
 .avaliacao {
+    background: url(/assets/img/webp.webp) top/cover;
     position: relative;
     width: 100vw;
     height: 100vh;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.avaliacao .hero-av {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background: url(/assets/img/webp.webp) top/cover;
     z-index: 1;
 }
 
-.avaliacao .hero-av h2 {
+.avaliacao h2 {
     margin-bottom: 0;
-    padding-top: 6rem;
 }
 
-.avaliacao .hero-av .cards {
+.avaliacao p {
+    margin-bottom: 2rem;
+}
+
+.avaliacao .cards {
     justify-content: space-evenly;
 }
 
-.avaliacao .hero-av .cards .card {
+.avaliacao .cards .card {
     width: 100%;
     max-width: 40rem;
-    max-height: 25rem;
-}
-
-.avaliacao .hero-av .cards .card h3 {
-    font-size: 1.6rem;
+    height: auto;
 }
 
 /* ================= SOBRE ================= */
-.sobre > p {
+.sobre>p {
     text-align: center;
     width: 100%;
     padding: 0 2rem;
@@ -339,7 +352,6 @@ p {
 }
 
 .sobre h3 {
-    font-size: 2rem;
     margin-top: 5rem;
 }
 
@@ -384,6 +396,10 @@ p {
     padding-right: 0;
 }
 
+.video h2, .video p, .premium-cta {
+    margin-bottom: 0rem;
+    padding: 0 2rem;
+}
 
 .video .video-container {
     position: relative;
@@ -447,30 +463,30 @@ p {
 /* ================= LOCALIZAÇÃO ================= */
 .localizacao {
     background-color: #141414;
+    padding: 1rem 0;
 }
 
 .localizacao p {
     margin-bottom: .5rem;
+    padding: 0 1rem;
 }
 
 .localizacao .map {
     width: 100%;
-    height: 25rem;
-    margin-bottom: 2rem;
+    height: 30rem;
+    margin: 0 auto 2rem;
 }
 
 .localizacao .map iframe {
     width: 100%;
-    max-width: 80rem;
     height: 100%;
-    border-radius: .5rem;
-}
-
-.localizacao .contato h3 {
-    font-size: 2rem;
 }
 
 /* ================= FAQ ================= */
+.faq {
+    padding-bottom: 0;
+}
+
 .faq-question {
     border: none;
     margin-bottom: 1rem;
@@ -501,30 +517,49 @@ p {
     padding: 2rem 1rem 9rem;
 }
 
-.footer h3 {
+.footer .sociais {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .sociais h3 {
     text-align: center;
     font-family: 'Inter', sans-serif;
     font-weight: normal;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 
 .footer .logo {
-    width: 100px;
+    width: 70px;
     margin: 1rem;
 }
 
-.footer .logo img {
-    width: 100%;
-}
-
-.footer .icon-instagram {
-    filter: invert();
+.footer .sociais .icon-instagram {
     width: 2.5rem;
     margin: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    gap: 1rem;
 }
 
-.footer .icon-instagram img {
-    width: 100%;
+.footer .sociais .icon-instagram img {
+    filter: invert();
+}
+
+.footer .sociais .icon-instagram span {
+    font-size: 1.2rem;
+    font-weight: normal;
+
+}
+
+.footer .sociais .icon-instagram:hover {
+    color: var(--bg-color);
 }
 
 .footer p:last-child {
@@ -590,7 +625,7 @@ p {
 }
 
 @media (width <=480px) {
-    .logo {
+    .hero .logo {
         max-width: 15rem;
     }
 
@@ -603,7 +638,7 @@ p {
     }
 
     .card .btn {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: .7rem 1.5rem;
     }
 }
@@ -618,8 +653,8 @@ p {
     }
 
     .sobre .itens {
-    grid-template-columns: 1fr;
-}
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (width <=840px) {
@@ -627,11 +662,17 @@ p {
         max-width: 35rem;
     }
 
-    .card h3 {
-        font-size: 1.4rem;
+    .avaliacao {
+        height: auto;
     }
 
     .avaliacao .hero-av .cards .card h3 {
         font-size: 1.3rem;
+    }
+}
+
+@media (width >=768px) {
+    .hero-content .btn {
+        padding: 1.8rem 3.4rem;
     }
 }
