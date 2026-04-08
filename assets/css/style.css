@@ -122,21 +122,19 @@ img {
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;flex-direction: column;
 }
 
 .hero .logo {
     margin: 0 auto;
     max-width: 25rem;
-    position: absolute;
-    top: 1rem;
 }
 
 .hero-content {
     text-align: center;
     padding: 2rem;
     width: 100%;
-    max-width: 90rem;
+    height: 100%;
 }
 
 .hero-content .btn.secondary:hover {
@@ -625,10 +623,6 @@ img {
 }
 
 @media (width <=480px) {
-    .hero .logo {
-        max-width: 15rem;
-    }
-
     .sobre .video-container {
         height: 20rem;
     }
@@ -644,6 +638,8 @@ img {
 }
 
 @media (width <=748px) {
+    
+
     .cards {
         height: auto;
     }
@@ -658,6 +654,10 @@ img {
 }
 
 @media (width <=840px) {
+    .hero .logo {
+        max-width: 10rem;
+    }
+
     .avaliacao .hero-av .cards .card {
         max-width: 35rem;
     }
